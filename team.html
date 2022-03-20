@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>The Team | Dhanak 2017</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/team.css">
+    <link rel="icon" type="image/png" href="image/dlogo.png">
+    <meta name="robots" content="noindex">
+    <script>
+        function team(id){
+            var teams = document.getElementsByClassName('content');
+            t = teams.length;
+            for(i=0;i<t;i++){
+                teams[i].style.display = "none";
+            }
+            var team = document.getElementById(id);
+            team.style.display = "block";
+        }
+    </script>
+</head>
+
+<body>
+    <div id="header">
+        <h1 onclick="team('coord')" style="cursor: pointer">The Team</h1>
+        <div id="circle">
+            <div class="ico"><p onClick="team('web')" class="ico_l">      Web           </p></div>
+            <div class="ico"><p onClick="team('event')" class="ico_l">    Events        </p></div>
+            <div class="ico"><p onClick="team('finance')" class="ico_l">  Finance       </p></div>
+            <div class="ico"><p onClick="team('publi')" class="ico_l">    Publicity     </p></div>
+            <div class="ico"><p onClick="team('creatives')" class="ico_r">Creatives     </p></div>
+            <div class="ico"><p onClick="team('hospi')" class="ico_r">    Hospitality   </p></div>
+            <div class="ico"><p onClick="team('deco')" class="ico_r">     Decoratives   </p></div>
+            <div class="ico"><p onClick="team('logi')" class="ico_r">     Logistics     </p></div>
+            <img src="dlogo_black.png" id="logo">
+        </div>
+    </div>
+    <div class="content" id="coord">
+        <h1>Coordinators</h1>
+    </div>
+    <div class="content" id="web">
+        <h1>Web</h1>
+        <div class="person">
+            <img src="img_avatar2.png" >
+            <h2>Name</h2>
+        </div>
+        <div class="person">
+            <img src="img_avatar2.png" >
+            <h2>Name</h2>
+        </div>
+        <div class="person">
+            <img src="img_avatar2.png" >
+            <h2>Name</h2>
+        </div>
+        <div class="person">
+            <img src="img_avatar2.png" >
+            <h2>Name</h2>
+        </div>
+        <div class="person">
+            <img src="img_avatar2.png" >
+            <h2>Name</h2>
+        </div>
+        <div class="person">
+            <img src="img_avatar2.png" >
+            <h2>Name</h2>
+        </div>
+        <div class="person">
+            <img src="img_avatar2.png" >
+            <h2>Name</h2>
+        </div>
+        <div class="person">
+            <img src="img_avatar2.png" >
+            <h2>Name</h2>
+        </div>
+    </div>
+    <div class="content" id="event">
+        <h1>Events</h1>
+    </div>
+    <div class="content" id="finance">
+        <h1>Finance</h1>
+    </div>
+    <div class="content" id="publi">
+        <h1>Publicity</h1>
+    </div>
+    <div class="content" id="creatives">
+        <h1>Creatives</h1>
+    </div>
+    <div class="content" id="hospi">
+        <h1>Hospitality</h1>
+    </div>
+    <div class="content" id="deco">
+        <h1>Decoratives</h1>
+    </div>
+    <div class="content" id="logi">
+        <h1>Logistics</h1>
+    </div>
+</body>
+</html>

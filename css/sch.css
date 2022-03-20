@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+}
+body{
+    overflow-x: scroll;
+    text-align: center;
+}
+table{
+    border-collapse: collapse;
+}
+th,td{
+    border: thin solid black;
+}

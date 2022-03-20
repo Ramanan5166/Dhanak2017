@@ -1,0 +1,430 @@
+<?php
+    error_reporting(0);
+    require "connect.php";
+    $name = $_COOKIE['name'];
+    $check = $db->query("SELECT * FROM login WHERE Name = '".$name."'");
+    if(!$check->num_rows){
+        setcookie("name", "", time() + (86400 * 80), "/");
+    }
+
+?>
+<!DOCTYPE html>
+<html>
+<title>Dhanak 2017 | IIST</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="image/dlogo.png">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/main.css" />
+<script src="js/script.js" type="text/javascript"></script>
+<script src="js/jquery-3.2.1.min.js"></script> 
+<script src="https://use.fontawesome.com/be5f4e3f7e.js"></script>
+    
+<!-- for Google -->
+<meta name="description" content=" Dhanak is the largest inter-collegiate Annual Cultural Festival of Southern India, organised by the Indian Institute of Space Science and Technology(IIST), Thiruvananthapuram.
+Slated to take place over the four action packed days from October 20 to 24, 2017, with the supreme blend of popular surprises.'Dhanak' is another word for 'rainbow', aptly encapsulating the essence and spirit of the festival— the singularity in a multitude of colours, passions, and people; the variety of cultures, talents, and ideas, inherently celebrated through their amalgamation in the form of music, dance, literature and visual arts. ">
+
+<meta name="keywords" content="Dhanak, IIST, Indian Institute of Space Science and Technology, Space, Science, Culture, South India, India, Popular, Pop, Festival, Fest, College, Thiruvananthapuram, Party, Celebration, Events, Gigs, largest, annual, inter collegiate, fun, students, people, artists, nightlife, money, ISRO, Kerala">
+
+<meta name="author" content="J Ramanan/Vipin/Pragya/Mohit">
+<meta name="copyright" content="Dhanak 2017">
+<meta name="application-name" content="Dhanak 2017">
+
+<!-- for Facebook -->
+<meta property="og:title" content="Dhanak 2017 | IIST">
+<meta property="og:type" content="website">
+<meta property="og:image" content="http://www.dhanak.co.in/img/dlogo.png">
+<meta property="og:url" content="http://www.dhanak.co.in">
+<meta property="og:description" content=" Dhanak is the largest inter-collegiate Annual Cultural Festival of Southern India, organised by the Indian Institute of Space Science and Technology(IIST), Thiruvananthapuram.
+Slated to take place over the four action packed days from October 20 to 24, 2017, with the supreme blend of popular surprises.'Dhanak' is another word for 'rainbow', aptly encapsulating the essence and spirit of the festival— the singularity in a multitude of colours, passions, and people; the variety of cultures, talents, and ideas, inherently celebrated through their amalgamation in the form of music, dance, literature and visual arts. ">
+
+<!-- for Twitter -->
+<meta name="twitter:card" content="Indian Institute of Space Science &amp; Technology, Trivandrum, proudly presents Dhanak - the 4-day long annual cultural extravaganza.Let's pop non-stop.">
+<meta name="twitter:title" content="Dhanak 2017 | IIST">
+<meta name="twitter:description" content=" Dhanak is the largest inter-collegiate Annual Cultural Festival of Southern India, organised by the Indian Institute of Space Science and Technology(IIST), Thiruvananthapuram.
+Slated to take place over the four action packed days from October 20 to 24, 2017, with the supreme blend of popular surprises.'Dhanak' is another word for 'rainbow', aptly encapsulating the essence and spirit of the festival— the singularity in a multitude of colours, passions, and people; the variety of cultures, talents, and ideas, inherently celebrated through their amalgamation in the form of music, dance, literature and visual arts. ">
+<meta name="twitter:image" content="http://www.dhanak.co.in/img/dlogo.png">
+
+
+<!-- Other -->
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="apple-mobile-web-app-title" content="Dhanak 17">
+<meta name="application-name" content="Dhanak 17">
+<meta name="theme-color" content="#ffffff">
+<script>
+$('#tophome').click(function(){
+    alert('top');
+    event.preventDefault();
+    $(html,body).animate({
+        scrollTop: 0
+    }, 500);
+});
+</script>
+<body>
+<div id="cover" class="closed">
+    <img id="clogo" src="dlogo.png">
+    <h2 id="ltimer"></h2>
+</div>
+
+<div id="screen">
+<!-- Navbar (sit on top) -->
+<div id="id03" class="model">
+       <div class="model-content animate">
+        <div class="cont">
+            <div class="imgcontainer">
+              <span onclick="document.getElementById('id03').style.display='none';document.getElementById('regmsg').innerHTML = '';" class="close" title="Close Modal">&times;</span>
+            </div>
+            <h3>Welcome <?php echo($_COOKIE['name']);?>.</h3>
+            <h3>Do you want to logout?</h3>
+            <button class="logoutbtn" onClick="logout()">Logout</button>
+           </div>
+    </div>
+</div>
+<div id="log">
+        <button onclick="document.getElementById('id01').style.display='block'" id="loginbut"
+        <?php 
+     if(isset($_COOKIE['name'])){
+       if($_COOKIE['name']!=""){
+         echo("style='display: none'");
+      }
+     }
+     ?>>Login</button>
+        
+        <div id="logged" <?php
+     if(isset($_COOKIE['name'])){
+       if($_COOKIE['name']==""){
+         echo("style='display: none'");
+      }
+     }
+     else{
+       echo("style='display: none'");
+     }
+     ?>>
+            <button onClick="document.getElementById('id03').style.display='block'" class="logoutbtn">Logout</button>
+  </div>
+
+</div>
+<div class="w3-top">
+    <div id="id01" class="model">
+     <div id="login"  class="model-content animate"  <?php 
+     if(isset($_COOKIE['name'])){
+       if($_COOKIE['name']!=""){
+         echo("style='display: none'");
+      }
+     }
+     ?>>
+        <div class="cont">
+            <div class="imgcontainer">
+              <span onClick="c()" class="close" title="Close Modal">&times;</span>
+              <img src="img_avatar2.png" alt="Avatar" class="avatar">
+            </div>
+
+            <div><label for="name">Name</label>
+                <input type="text" id="lname" name="name" required>
+            </div>
+            <div>
+                <label for="pass">Password</label>
+                <input type="password" id="lpass" name="pass" required>
+            </div>
+            <span><b>Not signed up yet? </b></span><span onClick="signup()" style="cursor: pointer;text-decoration:underline">Create an account</span>
+                <p id="error"></p>
+                <button type="submit" onClick="login()" id="logbutton">Login</button>
+           </div>
+        </div>  
+        
+    <div id="signup" class="model-content animate" style="display:none">
+            <div class="cont">
+                <div class="imgcontainer">
+                  <span onClick="c()" class="close" title="Close Modal">&times;</span>
+                  <img src="img_avatar2.png" alt="Avatar" class="avatar">
+                </div>
+                <div id="ls">
+                <button id="logshift" onClick="log()" style="cursor: pointer">Existing User?</button>
+                </div>
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" id="sname" name="name" required>
+                </div>
+                <div>
+                    <label for="mail">Phone</label>
+                    <input type="tel" id="smail" name="mail" required>
+                </div>
+                <div>
+                    <label for="clg">College</label>
+                    <input type="text" id="sclg" name="clg" required>
+                </div>
+                <div>
+                    <label for="pass">Password</label>
+                    <input type="password" id="spass" name="pass" required>
+                </div>
+                <p id="signerr"></p>
+                <button type="submit" onClick="sign()" id="logbutton">Submit</button>
+            </div>
+        </div>
+    </div>
+
+
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-left" href="javascript:void(0)" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav id="nav" class="w3-center transparent">
+        <ul>
+			<li><a class="icon fa-home" href="index.php"><span>Home</span></a></li>
+            <li><a class="icon fa-calendar" target="_blank" href="event.php"><span>Events</span></a></li>
+            <li><a class="icon fa-headphones" target="_blank" target="_blank" href="proshow.html"><span>ProNite</span></a></li>
+
+            <li><a class="icon fa-paper-plane" target="_blank" href="work.html"><span>Workshops</span></a></li>
+            <li><a href="hospi.html" target="_blank" class="icon fa-handshake-o"><span>Hospitality</span></a></li>
+
+            <li><a class="icon fa-child" target="_blank" href="sc.html"><span>Social Cause</span></a></li>
+            <li><a class="icon fa-user-o" href="campus.php"><span>Campus Ambassador</span></a></li>
+        </ul>
+	</nav>
+	
+  </div>
+ <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium" >
+    <a href="index.php" class="w3-button nav-pills" onclick="toggleFunction()">Home</a>
+    <a href="event.php" target="_blank" class="w3-button nav-pills" onclick="toggleFunction()">Events</a>
+    <a href="proshow.html" target="_blank" class="w3-button nav-pills" onclick="toggleFunction()">Pronite</a>
+    <a href="work.html" target="_blank" class="w3-button nav-pills"  onclick="toggleFunction()">Workshops</a>
+	<a href="hospi.html" target="_blank" class="w3-button nav-pills" onclick="toggleFunction()">Hospitality</a>
+	<a href="sc.html" target="_blank" class=" w3-button nav-pills" onclick="toggleFunction()">Social Cause</a>
+	<a href="campus.php" class=" w3-button nav-pills" onclick="toggleFunction()">Campus Ambassador</a>
+  </div>
+</div>
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+ <div id="web">
+ 	<p>Webbed is online</p>
+  <a href="webbed.php" target="_blank">Play Webbed</a><br>
+ </div>
+    <div class="w3-center">
+    <img id="logo" src="dlogo.png"><br>
+    <img src="image/dtxt.png" id="dtxt"><br>
+      <span id="dates">OCTOBER 20-23</span>
+  <!--span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Dhanak 2k17</span-->
+  </div>
+</div>
+<div class="w3-row w3-center w3-red w3-padding-16" id="timer">
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge" id="days">..+</span><br>
+    Days
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge" id="hours">..+</span><br>
+    Hours
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge" id="minutes">..+</span><br>
+    Minutes
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge" id="seconds">..+</span><br>
+    Seconds
+  </div>
+</div>
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <p class="w3-center">Dhanak is the Annual Cultural festival of Indian Institute of Space Science and Technology, Thiruvananthapuram, now entering the ninth glorious edition after resounding success of its predecessors since its inception in 2009. 'Dhanak' is another word for "rainbow", aptly encapsulating the essence - the singularity in a multitude of colours, passions, and people; the variety of cultures, talents, and ideas, inherently celebrated through their amalgamation in the form of music, dance, literature and visual arts.<br><br>
+
+Precisely as at twilight, when any rush is forgotten while promenading through the few feeble minutes of transience, wherein, the very act of living and being is a reward, and this rainbow, in that very moment, presents a stage. All these colours of joy, splendour, excitement, dedication and passion affirm this, with the abundance of creativity in the human spirit. This is exactly what Dhanak 2017 aims to celebrate in its four extensively packed days with the supreme blend of popular surprises, the set that has not been built yet, but is still too old to not be illustrious.<br><br>
+
+Confuse this not,<br>
+With all or any that you have seen,<br>
+For pop is all there is,<br>
+And yet,<br>
+All that has never been.</p>
+  </div>
+<div class="w3-row w3-center w3-red w3-padding-16">
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">40+</span><br>
+    Events
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">5000+</span><br>
+    Footfall
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">300,000+</span><br>
+    Prize Money
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">20+</span><br>
+    Colleges
+  </div>
+</div>
+<div id="schedule">
+    <iframe width="100%" height="90%" src="s3.html"></iframe>
+    <a href="Schedule1.xlsx">Download schedule</a>
+</div>
+<!-- Second Parallax Image with Gallery Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">GALLERY</span>
+  </div>
+</div>
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+  
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+   <div class="w3-col m3">
+      <img src="image/Gallery/g10.png" style="width:100%" onclick="clk(this)" class="w3-hover-opacity" alt="">
+    </div>
+   <div class="w3-col m3">
+      <img src="image/Gallery/g13.png" style="width:100%" onclick="clk(this)" class="w3-hover-opacity" alt="">
+    </div>
+   <div class="w3-col m3">
+      <img src="image/Gallery/g8.png" style="width:100%" onclick="clk(this)" class="w3-hover-opacity" alt="">
+    </div>
+   <div class="w3-col m3">
+      <img src="image/Gallery/g1.png" style="width:100%" onclick="clk(this)" class="w3-hover-opacity" alt="">
+    </div>
+  </div>
+  <div class="w3-row-padding w3-center">
+   <div class="w3-col m3">
+      <img src="image/Gallery/g4.png" style="width:100%" onclick="clk(this)" class="w3-hover-opacity" alt="">
+    </div>
+   <div class="w3-col m3">
+      <img src="image/Gallery/g14.png" style="width:100%" onclick="clk(this)" class="w3-hover-opacity" alt="">
+    </div>
+   <div class="w3-col m3">
+      <img src="image/Gallery/g6.png" style="width:100%" onclick="clk(this)" class="w3-hover-opacity" alt="">
+    </div>
+   <div class="w3-col m3">
+      <img src="image/Gallery/g5.png" style="width:100%" onclick="clk(this)" class="w3-hover-opacity" alt="">
+    </div>
+  </div>
+  <div class="w3-row-padding w3-center">
+   <div class="w3-col m3">
+      <img src="image/Gallery/g9.png" style="width:100%" onclick="clk(this)" class="w3-hover-opacity" alt="">
+    </div>
+   <div class="w3-col m3">
+      <img src="image/Gallery/g3.png" style="width:100%" onclick="clk(this)" class="w3-hover-opacity" alt="">
+    </div>
+   <div class="w3-col m3">
+      <img src="image/Gallery/g15.png" style="width:100%" onclick="clk(this)" class="w3-hover-opacity" alt="">
+    </div>
+   <div class="w3-col m3">
+      <img src="image/Gallery/g11.png" style="width:100%" onclick="clk(this)" class="w3-hover-opacity" alt="">
+    </div>
+  </div>
+    <p class="w3-center">Photograph/Naman Jain</p>
+</div>
+
+<!-- Second Parallax Image with Sponsors Text -->
+<div class="bgimg-4 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">OUR PREVIOUS SPONSORS</span>
+  </div>
+</div>
+<div class="w3-content w3-container w3-padding-64">
+<div class="w3-row-padding w3-center">
+   <div class="w3-col m3">
+      <img src="image/Spon/sbi.png" style="width:100%" class="w3-hover-opacity spon" alt="sbi">
+    </div>
+   <div class="w3-col m3">
+      <img src="image/Spon/godrej.png" style="width:100%" class="w3-hover-opacity spon" alt="godrej">
+    </div>
+   <div class="w3-col m3">
+      <img src="image/Spon/jet.png" style="width:100%" class="w3-hover-opacity spon" alt="jet airways">
+    </div>
+   <div class="w3-col m3">
+      <img src="image/Spon/ktdc.png" style="width:100%" class="w3-hover-opacity spon" alt="ktdc">
+    </div>
+   <div class="w3-col m3">
+      <img src="image/Spon/mts.png" style="width:100%" class="w3-hover-opacity spon" alt="mts">
+    </div>
+   <div class="w3-col m3">
+      <img src="image/Spon/sms.png" style="width:100%" class="w3-hover-opacity spon" alt="support my school">
+    </div>
+   <div class="w3-col m3">
+      <img src="image/Spon/ktm.png" style="width:100%" class="w3-hover-opacity spon" alt="ktm">
+    </div>
+   <div class="w3-col m3">
+      <img src="image/Spon/lic.png" style="width:100%" class="w3-hover-opacity spon" alt="lic">
+    </div>
+   <div class="w3-col m3">
+      <img src="image/Spon/hindu.png" style="width:100%" class="w3-hover-opacity spon" alt="hindu">
+    </div>
+   <div class="w3-col m3">
+      <img src="image/Spon/mad.png" style="width:100%" class="w3-hover-opacity spon" alt="mad">
+    </div>
+   <div class="w3-col m3">
+      <img src="image/Spon/club.png" style="width:100%" class="w3-hover-opacity spon" alt="club fm">
+    </div>
+   <div class="w3-col m3">
+      <img src="image/Spon/peta.png" style="width:100%" class="w3-hover-opacity spon" alt="peta">
+    </div>
+  </div>
+</div>
+<!-- Third Parallax Image with Contact Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min" id="contact">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT US</span>
+  </div>
+</div>
+<div class="w3-content w3-container w3-padding-64">
+    <div class="w3-row-padding w3-center w3-margin">
+        <div class="w3-col w3-padding-16 m4 con">
+            <img src="image/Contact/ashish.jpg" style="width:100%" class="contact" alt="Chief Co-ordinator">
+            <span>Ashish Tomy<br>Chief Co-ordinator<br>8547248615</span>
+        </div>
+        <div class="w3-col w3-padding-16 m4 con">
+            <img src="image/Contact/prajjwal.jpg" style="width:100%" class="contact" alt="Event Co-ordinator">
+            <span>Prajjwal Yash<br>Event Co-ordinator<br>9497300417</span>
+        </div>
+        <div class="w3-col w3-padding-16 m4 con">
+            <img src="image/Contact/sahal.jpg" style="width:100%" class="contact" alt="Finance Co-ordinator">
+            <span>Sahal Mohammed<br>Finance Co-ordinator<br>9497300231</span>
+        </div>
+    </div>
+    <div class="w3-row-padding w3-center w3-margin">
+        <div class="w3-col w3-padding-16 m4 con">
+            <img src="image/Contact/arun.jpg" style="width:100%" class="contact" alt="Publicity Co-ordinator">
+            <span>Arun Krishna<br>Publicity Co-ordinator<br>8281755570</span>
+        </div>
+        <div class="w3-col w3-padding-16 m4 con">
+            <img src="image/Contact/umang.jpg" style="width:100%" class="contact" alt="Hospitality Co-ordinator">
+            <span>Umang Tyagi<br>Hospitality Co-ordinator<br>9497300243</span>
+        </div>
+<!--
+        <div class="w3-col w3-padding-16 m4 con">
+            <img src="image/Contact/" style="width:100%" class="contact" alt="Creativity Co-ordinator">
+            <span>Noel<br>Creativity Co-ordinator<br>9497300181</span>
+        </div>
+-->
+    </div>
+</div>
+
+  <a href="#home"><span class="w3-button w3-black" id="tophome" onclick="scrol()"><i class="fa fa-arrow-up"></i></span></a>
+<!-- Modal for full size images on clk-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+    <p class="w3-center"><i>We are awesome</i></p>
+  <div class="w3-xlarge w3-section">
+    <a href="https://www.facebook.com/iist.dhanak/" target="_blank" style="border:none"><i class="fa fa-facebook-official w3-hover-opacity ico"></i></a>
+    <a href="https://www.instagram.com/dhanak.iist/" target="_blank" style="border:none"><i class="fa fa-instagram w3-hover-opacity ico"></i></a>
+    <a href="https://www.youtube.com/channel/UCOa9hKxficNntBtd6ombIiQ" target="_blank" style="border:none"><i class="fa fa-youtube w3-hover-opacity ico"></i></a>
+  </div>
+</footer>
+</div>
+ </body>
+</html>

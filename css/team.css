@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+}
+body{
+    text-align: center;
+}
+#circle{
+    width: 80%;
+    height: 30%;
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    max-width: 80%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    left: 50%;
+    overflow: visible;
+}
+#logo{
+    height: 100%;
+    top: 0;
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    pointer-events: none;
+    overflow: hidden;
+}
+.ico:nth-child(1) {
+	transform: rotate(30deg);
+}
+.ico:nth-child(2) {
+    transform: rotate(10deg);
+}
+
+.ico:nth-child(3) {
+    transform: rotate(-10deg);
+}
+
+.ico:nth-child(4) {
+    transform: rotate(-30deg);
+}
+
+.ico:nth-child(5) {
+    transform: rotate(150deg);
+}
+
+.ico:nth-child(6) {
+    transform: rotate(170deg);
+}
+
+.ico:nth-child(7) {
+    transform: rotate(190deg);
+}
+
+.ico:nth-child(8) {
+    transform: rotate(210deg);
+}
+.ico {
+    width: 35vh;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform-origin: right;
+}
+.ico_l{
+    text-align: left;
+	transform: rotate(0deg);
+    display: block;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+.ico_r{
+    text-align: right;
+    transform: rotate(180deg);
+    display: block;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.content {
+    padding: 5vh 0;
+    overflow-y: scroll;
+    display: none;
+/*    height: 60vh;*/
+    position: absolute;
+    width: 100vw;
+}
+
+#header {
+    height: 50vh;
+}
+#header h1{
+    height: 10vh;
+}
+.person {
+    width: 19%;
+    padding: 2.5%;
+    margin: 2.5%;
+    display: inline-block;
+    text-align: center;
+}
+.person:hover{
+    box-shadow: 1px 1px 10px 1px black;
+}
+.person img{
+    width: 60%;
+}
+
+#coord {
+    display: block;
+}

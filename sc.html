@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Social Cause | Dhanak 2017</title>
+    <link href="css/sc.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+     <link rel="icon" type="image/png" href="image/dlogo.png">
+	 <meta name="viewport" content="width=device-width" />
+     <meta name="robots" content="noindex">
+    <script>
+function scrol(elem){
+	//var height = window.innerHeight;
+	var n = document.getElementById(elem).getBoundingClientRect().top+50;
+	var step = 0;
+	step = n/100;
+	n = 0;
+	var scrolled = setInterval(function(){
+		if(n < 100){
+			var body = document.body; // For Chrome, Safari and Opera
+			var html = document.documentElement; // Firefox and IE places the overflow at the html level, unless else is specified. Therefore, we use the documentElement property for these two browsers
+			body.scrollTop += step;
+			html.scrollTop += step;
+			n++;
+		}
+		else{
+			clearInterval(scrolled);
+		}										
+},10);
+}
+i = 0;
+setInterval(function(){
+    var ss = document.getElementsByClassName("ss");
+    if(i<4){
+        ss[i].style.display = "block";
+        if(i==0){
+            ss[3].style.display = "none";
+        }
+        else{
+            ss[i-1].style.display = "none";
+        }
+        i++;
+    }
+    else{
+        ss[i-1].style.display = "none";
+        i = 0;
+        ss[i].style.display = "block";
+    }
+},2000);
+    </script>
+</head>
+
+<body>
+    <div id="banner">
+        <img src="image/sctxr.png" alt="dhanak 2017" id="dtxt">
+    </div>
+    <div>
+        <p id="intro">
+        <span id="span">O</span>ver the years, as Dhanak has grown and become more self-sufficient, it has started to impart help to the society in better ways. Nirmaan, the society of IIST that works in the domain of social betterment throughout the year, may it be by weekly visiting various government schools, by visiting and contributing to orphanages, or by holding cleanliness drives and many more such similar activities. Dhanak Social works in conjunction with the society by giving needed support to bring about more significant changes. Last year, Dhanak Social adopted a school in rural Kerala and contributed to the installation of basic facilities and betterment of the infrastructure in its own capacity by the money raised through the festival ventures.</p>
+        <div id="tags">
+            <div class="split" onclick="scrol('dhwani')">
+                <h1>DHWANI</h1>
+            </div>
+            <div class="split" onclick="scrol('pragati')">
+                <h1>PRAGATI</h1>
+            </div>
+        </div>
+        <div id="con" onclick="scrol('contact')"><h1>Get Involved</h1></div>
+    </div>
+    <div class="header" id="dhwani">
+        <h1>DHWANI</h1>
+    </div>
+    <div class="content">
+        <p>
+        Dhwani is a social initiative by Dhanak-2k17 and Aagaaz, an organisation under Sanjeevani Charitable Trust -an employee driven CSR wing of Infosys, Thiruvananthapuram.This is a voice donation drive that aims at developing an audio library consisting of personal accounts/information about the world, environment, people, experiences, and everything under the stars. This is a joint initiative with GSVT, Thiruvananthapuram for the development of an audio library and extend its availability to other blind schools.</p>
+        <div id="txt-scroll">
+            <span class="ss">There are about 5 million blind people in India (Census 2011).</span>
+            <span class="ss">3 out of every 1000 persons aged 10 to 19 years is visually disabled.</span>
+            <span class="ss">Main causes of blindness in India are Cataract , Refractive Error, Glaucoma, Corneal Blindness.</span>
+            <span class="ss">80% of the visual impairment can be avoided or cured.</span>  
+        </div>
+        <h2>About GSVT</h2>
+<p>The Government School for Visually Impaired at Vazhuthacaud,Thiruvananthapuram is an institution for the visually challenged. The aim of this school is to devise a comprehensive educational programme which helps a student to raise from a ‘visually challenged’ state to a ‘differently abled’ state. This institution has provided education and training to more than a thousand visually challenged persons. This school has been distributing Audio Books covering a variety of topics to the visually challenged teachers and students all over Kerala. </p>
+<span>For more information:-Visit the school at </span><a href="http://www.gsvt.in" target="_blank">http://www.gsvt.in</a>
+    </div>
+    <div id="box">
+        <h2>How can I contribute?</h2>
+        <p>Record a short voice memo/audio clip (in English , Malayalam or Hindi) of a maximum 10 minutes and send on the following email-id</p>
+        <a href="mailto:dhanaksocial@gmail.com">dhanaksocial@gmail.com</a>
+    </div>
+    <div id="rule">
+<!--        <div class="split">-->
+            <h2>Guidelines</h2>
+            <ol>
+                <li>Any relevant topic can be chosen and recorded. Speeches, Poems, Debates, articles, scientific discussions and topics, or any other way can be chosen for disseminating information.</li>
+                <li>In case the topic is taken from some book or other source, please provide the details of the source in the beginning of the recording.</li>
+                <li>Make sure there’s no noise in the background while recording the audio.</li>
+                <li>Proper pronunciation of words is required.</li>
+                <li>Give necessary pause at commas, exclamation marks, question marks etc.</li>
+                <li>Use of offensive words strictly not allowed in whatsoever context as the audience aimed at is under 18.</li>
+
+            </ol>
+<!--
+        </div>
+        <div class="split">
+-->
+            <h2>Suggestions</h2>
+            <ol>
+                <li>Use earphones with built in microphone for recording.</li>
+                <li>Audio recording software (like Audacity) can be used for recording. They come with whole lot of features to help while recording.</li>
+                <li>Allow a buffer time of 5 seconds in the audio file before the actual recording matter.</li>
+                <li>The language used (for general topics)should be easy to understand and should include commonly used words.</li>
+                <li>Please provide us the content of the recording in a text document. This might be used to re-record the content in case there’s some issue in the recording provided to us.</li>
+                <li>A formal introduction about the speaker can be provided either in the recording or the text document. However, one can submit the recording anonymously too.</li>
+                <li>We here at IIST value your time and hence suggest to keep the recording under 10 minutes. However, there’s no strict upper cap on the time of recording. For longer recordings we suggest breaking the recordings into multiple parts which will be convenient for both the speaker and the listeners.</li>
+            </ol>
+<!--        </div>-->
+    </div>
+        <p id="quote">"Our voices will light up their lives, our voices for their vision."</p>
+    <div class="header" id="pragati">
+        <h1>PRAGATI</h1>
+    </div>
+    <div class="content">
+        <p>Dhanak 2017 is also launching an initiative Pragati to contribute towards setting up of better infrastructural facilities at the Government Higher Secondary School, Tholicode. The amount gathered by Dhanak Social funds will go directly towards the service of the cause for a school which lacks basic facilities that are a indispensible for every modern school. This includes the provision of smart classrooms, setting up a library, and betterment of classrooms and basic amenities around the campus.</p>
+
+<h2>About GHSS, Tholicode</h2>
+<p>The Government Higher Secondary School is located in Tholicode village under Nedumangad Tehsil which was established in 1996. This school provides education to about 360 higher secondary students in science and humanities stream out of which majority of students belong to backward communities. GHSS has built a new building with the help of government funds. Due to inadequate funds, the school still lacks educational facilities and basic amenities. Such facilities are very essential to increase the quality of education which is required to be in par with the outside world.
+</p>
+    </div>
+    <div class="content" id="contact">
+        <h1>Contacts</h1>
+        <div class="cont"><h3>Shubham Aghao</h3><h3>9497300057</h3><a href="mailto:shubham.aghao@gmail.com">shubham.aghao@gmail.com</a></div>
+        <div class="cont"><h3>Manish Chauhan</h3><h3>9497300010</h3><a href="mailto:manishc12@gmail.com">manishc12@gmail.com</a></div>
+        <div class="cont"><h3>Ansuman Palo</h3><h3>9497300043</h3><a href="mailto:ansuman97palo@gmail.com">ansuman97palo@gmail.com</a></div>
+    </div>
+</body>
+
+</html>

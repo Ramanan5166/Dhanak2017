@@ -1,0 +1,714 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600|Arvo:700");
+/* CSS Document */
+html { 
+  
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+* {
+	box-sizing: border-box;
+	margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+li{
+    list-style: none;
+}
+body {
+	font-family: "Lato", sans-serif;
+	position: relative;
+	
+}
+::-webkit-scrollbar
+{
+    width: 0px;
+    height: 0px;
+}
+::-moz-scrollbar
+{
+    width: 0px;
+    height: 0px;
+}
+::-ms-scrollbar
+{
+    width: 0px;
+    height: 0px;
+}
+::-o-scrollbar
+{
+    width: 0px;
+    height: 0px;
+}
+::scrollbar
+{
+    width: 0px;
+    height: 0px;
+}
+
+#cover {
+/*    display: none;*/
+    text-align: center;
+    padding: 30vh 10vw;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+    background-color: black;  
+    transition: transform 1s linear;
+}
+#clogo {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+#cover h2{
+    text-align: center;
+    color: white;
+    animation: fade 1s linear;
+}
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.closed {
+    transform: translateY(0);
+}
+.open {
+    transform: translateY(-200vh);
+}
+
+.con {
+    width: 250px!important;
+    margin: 0 25px;
+    cursor: pointer;
+}
+
+#screen {
+    width: 100vw;
+    height: 100vh;
+    overflow: scroll;
+}
+/* Style the tab */
+div.tab {
+    background:#263238;
+    width:50%;
+    padding: 0px; 
+	position: absolute;
+	height: 100vh;
+}
+/* Change background color of buttons on hover */
+div.tab button:hover {	
+     background-color: #062f4f!important; 
+}
+/* Create an active/current "tab button" class */
+div.tab div.active {
+     background-color:  #E42D0A!important;
+    height: 100%;
+}
+.active .collapse{
+    display: block;
+    line-height: 40px;
+    z-index: 100;
+}
+.collapse a{
+    padding: 10px;
+}
+.collapse a:hover{
+    border-radius: 5px;
+    background-color: #4d4847;
+}
+ /*Style the tab content*/ 
+.tabcontent {
+    z-index: -1;
+    float: left;
+	display: none;
+	overflow: hidden; 
+	position: fixed; 
+	right: 0px; 
+	height:100%; 
+	width: 90%;
+}
+.abc{
+    width:50%;
+    right: 0;
+	position: absolute;
+    height:100vh;    
+    overflow-y: scroll; 		
+}
+.def {
+     font-size: 20px;          
+     height:100vh;
+     position: relative;
+     width: 100%;
+     transition: all 1s linear;
+}
+
+
+.def h1
+      {
+        margin-left: 10px;
+        margin-top:  2px;
+      }
+.def img{
+        width: 100%;
+        height: 100%;
+      }
+
+.custom_row{
+        position: fixed;
+        top: 0px; 
+		margin-left: 0px; 
+		margin-right: 0px; 
+		width: 100%;
+        }
+
+.custom_container {
+	padding-left: 5px;
+	margin-left: 0px; 
+	margin-right: 0px; 
+	width: 100%;
+}
+
+
+.active h3{
+    font-size: 5.5vw;
+    margin: 0;
+}
+.main {
+	position: relative; 
+	width: 75%;
+}
+    
+button{
+        font:inherit;
+        margin:0;
+        overflow:visible;
+        text-transform:none;
+  		}
+    
+        optgroup{font-weight:bold}
+        button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}
+        button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner{border-style:none;padding:0}
+        button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring{outline:1px dotted ButtonText}               
+
+       .w3-black,.w3-hover-black:hover{color:#fff!important;background-color:#3949ab!important}
+
+        .w3-button:hover{color:#000!important;background-color:#ccc!important}
+        .w3-button{
+            border:none;
+            display:inline-block;
+            outline:0;
+            padding: 8px 16px;
+            vertical-align:middle;
+            overflow:hidden;
+            text-decoration:none;
+            color:inherit;
+            background-color:inherit;
+            text-align:center;
+            cursor:pointer;
+            white-space:nowrap;
+            -webkit-touch-callout:none;
+            -webkit-user-select:none;
+            -khtml-user-select:none;
+            -moz-user-select:none;
+            -ms-user-select:none;
+            user-select:none;
+            position: relative;
+            float: right;
+			top: 0px;
+            margin-top: -55px;
+            right: 5px;
+            z-index: 10;
+            }
+        
+        .w3-xlarge{font-size:24px!important}
+
+        .w3-circle{width: 50px;
+          height: 50px;
+          padding: 10px 16px;
+          font-size: 18px;
+          line-height: 1.33;
+          border-radius: 25px;
+        }
+        
+a,a:visited, a:hover, a:active,a:focus{
+            text-decoration: none!important;
+            color: white;
+}
+.text {
+	position: absolute;
+	bottom: 0px;
+    left: 0px;
+}
+.text>a{
+	border-radius: 0px;
+}
+
+.span_text {
+   color: white; 
+   font: bold 24px/45px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0); 
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px; 
+   
+}
+
+.modal-open {
+    overflow: scroll;
+}
+
+/*///////////Mobile and Tablets/////////////*/
+.close_button {
+	display: none;
+	position: relative;
+    width: 100%;
+	top: 2.5px;
+	border-radius: 0px;
+}
+.header_h1 {
+    color: white;
+    text-align: center; 
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+    font-size: 4vh;    
+}
+
+.ham {
+	font-size: 5vh;
+    position: absolute;
+    top: 2.5vh;
+	left:10px;
+}
+@media only screen and (max-width: 768px) and (min-width: 600px)  {
+	.events_button{
+		display: block;
+		z-index: 1000
+	}
+	.def{
+		width: 100%!important;
+	}
+	.tab{
+		overflow-y: scroll;
+	}
+	body{
+		overflow-y: hidden;
+	}
+}
+
+.events_header {
+	width: 25%;
+	position: fixed;
+	top: 0px;
+	z-index: 100; 
+	margin-top:20px;	
+}
+
+#img {
+	max-height: 300px;
+  	width: 100%;
+  	object-fit: cover;
+  
+}
+.mobile_header {
+    background-color: black;
+    opacity: 0.7;
+    height: 10vh;
+	display: none;
+	position: fixed;
+	z-index: 1500;	
+	left: 0px;
+    line-height: 10vh;
+}
+
+@media only screen and (max-width: 600px)  {
+	.events_header{
+		display: none;
+	}
+	.navtab {
+        display: none;
+        position: absolute;
+        height: auto;
+        width: 100%!important;
+        overflow-y: scroll;
+        top: 0;
+        left: 0;
+    }
+    .tablinks{
+        /*height: 11.7vh!important;*/
+    }
+    .tab{
+        display: none;
+    }
+	.events_button{
+		display: block;
+		z-index: 1000
+	}
+	.abc{
+		width: 100%!important;
+	}
+	.mobile_header{
+		display: block;
+	}
+
+	.close_button {
+	display: block;
+	}
+	body{
+		overflow-y: hidden;
+	}
+    .tabcontent{
+        width: 100%;
+    }
+    .active h3{
+        font-size: 20px;
+    }
+    .animate {
+        width: 80%!important;
+    }
+
+}
+
+@media only screen and (max-width: 768px) and (min-width: 600px) and (max-height: 500px) {
+	.events_header{
+		display: none;
+		
+	}
+	.tab{
+		overflow-y: scroll;
+	}
+	body{
+		overflow-y: hidden;
+	}
+	
+}
+
+.list {
+    display: none;
+}
+
+.nav-tabs a{
+    color: black;
+}
+.list {
+    display: none;
+}
+.icon {
+    width: 5vh;
+    height: 5vh;
+    border-radius: 5vh;
+    margin: 6.5vh 0;
+    display: block;
+}
+
+.link {
+    width: 100%;
+    height: 100vh;
+    padding-top:5%; 
+    position: absolute;
+	cursor: default;
+}
+
+.ul {
+    height: 1px;
+    margin: 5% 10%;
+    width: 80%;
+    background-color: transparent;
+}
+
+.eventico {
+    height: 20vh;
+}
+
+#online li{
+    display: inline-block;
+    width: 50%;
+}
+#literary li{
+    display: inline-block;
+    width: 50%;
+}
+#informal li{
+    display: inline-block;
+    width: 50%;
+}
+#art li{
+    display: inline-block;
+    width: 50%;
+}
+input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+#logbutton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+#logbutton:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    position: relative;
+}
+
+img.avatar {
+    height: 20vh;
+    border-radius: 50%;
+}
+
+.cont {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.model {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+    color: #777;
+    font-family: "Lato", sans-serif;
+}
+
+/* Modal Content/Box */
+.model-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 10px;
+    top: 10;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    width: 50%;
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+#loginbut {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 3px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+
+#log{    
+    position: fixed;
+    top: 5vh;
+    right: 2.5vw;
+    z-index: 10;
+    background-color: transparent;
+}
+#log button{
+    height: 5vh;
+    line-height: 5vh;
+    padding: 0 10px;
+}
+.navtab {
+    position: fixed;
+    width: 10%;
+    top: 0;
+    left: 0;
+}
+
+.tablinks {
+    width: 100%;
+    /*height: 12.5vh;*/
+    background-color: #0E0B16;
+    border: none;
+    border-radius: 0;
+}
+.tablinks:hover,.tablinks:active,.tablinks:focus{
+    background-color: #4717F6!important;
+}
+.btn.active{
+    background-color: #0E0B16;
+}
+.logoutbtn {
+    background-color: #e52424;
+    color: white;
+    border-radius: 3px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+.jumbo {
+    margin: 0 10% 20px;
+    width: 80%;
+    height: 50%;
+    border-bottom: 1px solid white;
+}
+.jumbo h3{
+    position: relative;
+    top: 10vh;
+}
+
+.reg {
+    display: none;
+}
+
+@font-face {
+    font-family:"OpenSansLight";
+    src: url("fonts/OpenSans-Light.ttf"); /* TTF file for CSS3 browsers */
+}
+
+
+ol li{
+	list-style-type: decimal;
+}
+.modal_text_style{
+  
+  
+	padding-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 21px;
+    font-weight:100;
+    text-align: left;
+    line-height: 140%;
+}
+.modal_text_style q{
+	font-style: italic;
+}
+p{
+	text-indent: 25px;
+}
+ol{
+	padding-left: 35px;
+}
+.ard {
+	background-color: rgba(51,51,51,0,5);
+	width: 100%;
+	padding-left: 15px;
+}
+.ard button{
+	width: 100px;
+	height: 32px;
+	background-color: #4285f4;
+    color: #fff;
+	display: inline-block;     
+    line-height: 32px;
+    border-radius: 2px;
+    font-size: 0.9em;      
+}
+.ard button : hover{
+	background-color: rgba(25,118,210,1.00);
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+#regbtn {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 3px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+
+}
+#logshift {
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: #fd887a;
+    color: black;
+
+    font-weight: bold;
+}
+#ls{
+    text-align: right;
+}
+button{
+    text-transform: uppercase;
+}
+#regcont {
+    width: 35%
+}
+#logmsg {
+    color: black;
+    display: none;
+}

@@ -1,0 +1,94 @@
+@font-face{
+	font-family: 'Caviar Dreams';
+	src: url('../Sansation_Regular.ttf');
+}
+@font-face{
+	font-family: 'title';
+	src: url('../OptimusPrinceps.ttf');
+}
+*{
+    margin: 0;
+}
+a:active,a:hover,a:focus,a:visited,a:link{
+    color: white;
+    text-decoration: none;
+}
+body{
+	font-family: 'Caviar Dreams';
+    background-image: url(../image/bg.jpg);
+    background-size: 100vw 100vh;
+}
+#banner{
+    font-size: 20px;
+    font-family: 'title';
+    letter-spacing: 5px;
+    padding: 0vh 10vw;
+    text-align: center;
+    height: 100vh;
+}
+#banner img{
+    padding: 2vh 0;
+}
+#robo{
+    width: 80vw;
+}
+#banner h1{
+    padding: 2vh 0;
+}
+#banner h3{
+	font-family: 'Caviar Dreams';    
+}
+#banner p{
+    font-weight: bold;
+}
+#body{
+    background-color: #f0f0f0;
+    padding: 10vh 10vw;
+}
+#logo{
+    margin: 5vh 0 0;
+    width: 100px;
+}
+#span {
+    float: left;
+    width: 0.7em;
+    font-size: 450%;
+    font-family: algerian, courier;
+    line-height: 80%;
+}
+h1,h2{
+    padding: 10vh 0 2vh;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+h3{
+    padding-left: 20px;
+    cursor: pointer;
+}
+i{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 10px;
+    border-right: 3px solid black;
+    border-bottom: 3px solid black;
+    transform: rotateZ(45deg) translateY(-5px);
+}
+#loginbut {
+	font-family: 'Caviar Dreams';
+    position: fixed;
+    right: 5vw;
+    top: 5vh;
+    background-color: #959595;
+    color: white;
+    border-radius: 3px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+
+}

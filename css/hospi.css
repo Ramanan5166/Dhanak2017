@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face{
+	font-family: 'Sansation';
+	src: url('../Sansation_Regular.ttf');
+}
+@font-face{
+	font-family: 'noodle';
+	src: url('../Goeslim Regular.otf');
+}
+*{
+	margin: 0;
+}
+.container{
+	background-color: #f0f0f0;
+	padding: 10vh 10vw;
+	font-family: 'Sansation';
+}
+h2{
+	margin: 50px 0 10px;
+}
+h3{
+	margin: 30px 0 10px;
+}
+li{
+    padding-left: 50px;
+	margin: 10px 0;
+    list-style: none;
+}
+#intro{
+    font-size: 20px;
+}

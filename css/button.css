@@ -1,0 +1,178 @@
+
+/*!
+ * Propeller v1.1.0 (http://propeller.in): button.css
+ * Copyright 2016-2017 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+*/
+
+.btn1 { display: inline-block; padding: 6px 12px; margin-bottom: 0; text-align: center; white-space: nowrap; vertical-align: middle; -ms-touch-action: manipulation; touch-action: manipulation; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-image: none; border: 1px solid transparent; border-radius: 4px; font-size: 14px; font-weight: 400; line-height: 1.1; text-transform: uppercase; letter-spacing: inherit; color: rgba(255, 255, 255, 0.87);}
+.btn1-default, .btn1-link { color: rgba(0, 0, 0, 0.87);}
+
+/* -- Buttons style ------------------------------------ */
+.btn1 { outline: 0; outline-offset: 0; border: 0; border-radius: 2px; transition: all 0.15s ease-in-out; -o-transition: all 0.15s ease-in-out; -moz-transition: all 0.15s ease-in-out; -webkit-transition: all 0.15s ease-in-out;}
+.btn1:focus,.btn1:active,.btn1.active,.btn1:active:focus,.btn1.active:focus { outline: 0; outline-offset: 0; box-shadow: none;}
+
+/* -- Buttons varients -------------------------------- */
+/* -- Buttons raised --*/
+.pmd-btn1-raised { box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);}
+.pmd-btn1-raised:active,.pmd-btn1-raised.active,.pmd-btn1-raised:active:focus,.pmd-btn1-raised.active:focus { box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);}
+.pmd-btn1-raised:focus { box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);}
+
+/* -- Buttons circle --*/
+.btn1.pmd-btn1-fab { padding: 0; border-radius: 50%;}
+.btn1.pmd-btn1-fab span,
+.btn1.pmd-btn1-fab i { line-height:56px;}
+
+/* -------------------------- Buttons colors -------------------------------- */
+
+/* -- Buttons Default --*/
+.btn1-default,.dropdown-toggle.btn1-default { background-color: #ffffff;}
+.btn1-default:hover,.dropdown-toggle.btn1-default:hover { background-color: #e5e5e5;}
+.btn1-default:active,.dropdown-toggle.btn1-default:active,.btn1-default.active,.dropdown-toggle.btn1-default.active {background-color: #e5e5e5;}
+.btn1-default:focus,.dropdown-toggle.btn1-default:focus { background-color: #cccccc;}
+.btn1-default:disabled,.dropdown-toggle.btn1-default:disabled,.btn1-default.disabled,.dropdown-toggle.btn1-default.disabled,
+.btn1-default[disabled],.dropdown-toggle.btn1-default[disabled] { background-color: #b3b3b3;}
+.btn1-default .ink,.dropdown-toggle.btn1-default .ink { background-color: #b8b8b8;}
+
+/* -- Buttons Default flat --*/
+.pmd-btn1-flat.btn1-default { color: #212121; background-color: transparent;}
+.pmd-btn1-flat.btn1-default:hover { color: #141414; background-color: #e5e5e5;}
+.pmd-btn1-flat.btn1-default:active,.pmd-btn1-flat.btn1-default.active { color: #020202; background-color: #cccccc;}
+.pmd-btn1-flat.btn1-default:focus { color: #000000; background-color: #cccccc;}
+.pmd-btn1-flat.btn1-default .ink { background-color: #808080;}
+
+/* -- Buttons Default outline --*/
+.btn1-default.pmd-btn1-outline{border:solid 1px #333333;}
+
+/* -- Buttons Primary --*/
+.btn1-primary,.dropdown-toggle.btn1-primary{ background-color: #303f9f;}
+.btn1-primary:hover,.dropdown-toggle.btn1-primary:hover { background-color: #4e6cef;}
+.btn1-primary:active,.dropdown-toggle.btn1-primary:active,.btn1-primary.active,.dropdown-toggle.btn1-primary.active {background-color: #4e6cef;}
+.btn1-primary:focus,.dropdown-toggle.btn1-primary:focus { background-color: #455ede;}
+.btn1-primary:disabled,.dropdown-toggle.btn1-primary:disabled,.btn1-primary.disabled,.dropdown-toggle.btn1-primary.disabled,
+
+.btn1-primary[disabled],.dropdown-toggle.btn1-primary[disabled] { background-color: #b3b3b3;}
+.btn1-primary .ink,.dropdown-toggle.btn1-primary .ink { background-color: #3b50ce;}
+
+/* -- Buttons primary flat --*/
+.pmd-btn1-flat.btn1-primary { color: #4285f4; background-color: transparent;}
+.pmd-btn1-flat.btn1-primary:hover { color: #4e6cef; background-color: #e5e5e5;}
+.pmd-btn1-flat.btn1-primary:active,.pmd-btn1-flat.btn1-primary.active { color: #455ede; background-color: #cccccc;}
+.pmd-btn1-flat.btn1-primary:focus { color: #3b50ce; background-color: #cccccc;}
+.pmd-btn1-flat.btn1-primary .ink { background-color: #808080;}
+
+/* -- Buttons primary outline --*/
+.pmd-btn1-outline.btn1-primary{ border: solid 1px #4285f4; background-color:transparent; color:#4285f4;}
+.pmd-btn1-outline.btn1-primary:hover, .pmd-btn1-outline.btn1-primary:focus { border: solid 1px #4285f4; background-color:#4285f4; color:#fff;}
+
+/* -- Buttons Success --*/
+.btn1-success,
+.dropdown-toggle.btn1-success { background-color: #259b24;}
+.btn1-success:hover,.dropdown-toggle.btn1-success:hover { background-color: #0a8f08;}
+.btn1-success:active,.dropdown-toggle.btn1-success:active,.btn1-success.active,.dropdown-toggle.btn1-success.active { background-color: #0a8f08;}
+.btn1-success:focus,.dropdown-toggle.btn1-success:focus { background-color: #0a7e07;}
+.btn1-success:disabled,.dropdown-toggle.btn1-success:disabled,.btn1-success.disabled,.dropdown-toggle.btn1-success.disabled,
+.btn1-success[disabled],.dropdown-toggle.btn1-success[disabled] { background-color: #b3b3b3;}
+.btn1-success .ink,.dropdown-toggle.btn1-success .ink { background-color: #056f00;}
+
+/* -- Buttons flat Success --*/
+.pmd-btn1-flat.btn1-success { color: #259b24; background-color: transparent;}
+.pmd-btn1-flat.btn1-success:hover { color: #0a8f08; background-color: #e5e5e5;}
+.pmd-btn1-flat.btn1-success:active,.pmd-btn1-flat.btn1-success.active { color: #0a7e07; background-color: #cccccc;}
+.pmd-btn1-flat.btn1-success:focus { color: #056f00; background-color: #cccccc;}
+.pmd-btn1-flat.btn1-success .ink { background-color: #808080;}
+
+/*-- Button success outline --*/
+.pmd-btn1-outline.btn1-success{ border: solid 1px #259b24; background-color:transparent; color:#259b24;}
+.pmd-btn1-outline.btn1-success:hover, .pmd-btn1-outline.btn1-success:focus { border: solid 1px #259b24; background-color:#259b24; color:#fff;}
+
+/* -- Buttons Info --*/
+.btn1-info,.dropdown-toggle.btn1-info { background-color: #03a9f4;}
+.btn1-info:hover,.dropdown-toggle.btn1-info:hover { background-color: #039be5;}
+.btn1-info:active,.dropdown-toggle.btn1-info:active,.btn1-info.active,.dropdown-toggle.btn1-info.active { background-color: #039be5;}
+.btn1-info:focus,.dropdown-toggle.btn1-info:focus { background-color: #0288d1;}
+.btn1-info:disabled,.dropdown-toggle.btn1-info:disabled,.btn1-info.disabled,.dropdown-toggle.btn1-info.disabled,.btn1-info[disabled],.dropdown-toggle.btn1-info[disabled] { background-color: #b3b3b3;}
+.btn1-info .ink,.dropdown-toggle.btn1-info .ink { background-color: #0277bd;}
+
+/* -- Buttons Info flat--*/
+.pmd-btn1-flat.btn1-info { color: #03a9f4; background-color: transparent;}
+.pmd-btn1-flat.btn1-info:hover { color: #039be5; background-color: #e5e5e5;}
+.pmd-btn1-flat.btn1-info:active,.pmd-btn1-flat.btn1-info.active { color: #0288d1; background-color: #cccccc;}
+.pmd-btn1-flat.btn1-info:focus { color: #0277bd; background-color: #cccccc;}
+.pmd-btn1-flat.btn1-info .ink { background-color: #808080;}
+
+/* -- Button Info outline --*/
+.pmd-btn1-outline.btn1-info{ border: solid 1px #03a9f4; background-color:transparent; color:#03a9f4;}
+.pmd-btn1-outline.btn1-info:hover, .pmd-btn1-outline.btn1-info:focus { border: solid 1px #03a9f4; background-color:#03a9f4; color:#fff;}
+
+/* -- Buttons Warning --*/
+.btn1-warning,.dropdown-toggle.btn1-warning { background-color: #ffc107;}
+.btn1-warning:hover,.dropdown-toggle.btn1-warning:hover { background-color: #ffb300;}
+.btn1-warning:active,.dropdown-toggle.btn1-warning:active,.btn1-warning.active,.dropdown-toggle.btn1-warning.active { background-color: #ffb300;}
+.btn1-warning:focus,.dropdown-toggle.btn1-warning:focus { background-color: #ffa000;}
+.btn1-warning:disabled,.dropdown-toggle.btn1-warning:disabled,.btn1-warning.disabled,.dropdown-toggle.btn1-warning.disabled, .btn1-warning[disabled],.dropdown-toggle.btn1-warning[disabled] { background-color: #b3b3b3;}
+.btn1-warning .ink,.dropdown-toggle.btn1-warning .ink { background-color: #ff8f00;}
+
+/* -- Buttons flat Warning --*/
+.pmd-btn1-flat.btn1-warning { color: #ffc107; background-color: transparent;}
+.pmd-btn1-flat.btn1-warning:hover { color: #ffb300; background-color: #e5e5e5;}
+.pmd-btn1-flat.btn1-warning:active,.pmd-btn1-flat.btn1-warning.active { color: #ffa000; background-color: #cccccc;}
+.pmd-btn1-flat.btn1-warning:focus { color: #ff8f00; background-color: #cccccc;}
+.pmd-btn1-flat.btn1-warning .ink { background-color: #808080;}
+
+/*-- Button warning outline --*/
+.pmd-btn1-outline.btn1-warning{ border: solid 1px #ffc107; background-color:transparent; color:#ffc107;}
+.pmd-btn1-outline.btn1-warning:hover, .pmd-btn1-outline.btn1-warning:focus { border: solid 1px #ffc107; background-color:#ffc107; color:#fff;}
+
+/* -- Buttons Danger --*/
+.btn1-danger,.dropdown-toggle.btn1-danger { background-color: #ff5722;}
+.btn1-danger:hover,.dropdown-toggle.btn1-danger:hover { background-color: #f4511e;}
+.btn1-danger:active,.dropdown-toggle.btn1-danger:active,.btn1-danger.active,.dropdown-toggle.btn1-danger.active { background-color: #f4511e;}
+.btn1-danger:focus,.dropdown-toggle.btn1-danger:focus { background-color: #e64a19;}
+.btn1-danger:disabled,.dropdown-toggle.btn1-danger:disabled,.btn1-danger.disabled,.dropdown-toggle.btn1-danger.disabled,.btn1-danger[disabled],.dropdown-toggle.btn1-danger[disabled] { background-color: #b3b3b3;}
+.btn1-danger .ink,.dropdown-toggle.btn1-danger .ink { background-color: #d84315;}
+
+/* -- Buttons flat Danger --*/
+.pmd-btn1-flat.btn1-danger { color: #ff5722; background-color: transparent;}
+.pmd-btn1-flat.btn1-danger:hover { color: #f4511e; background-color: #e5e5e5;}
+.pmd-btn1-flat.btn1-danger:active,.pmd-btn1-flat.btn1-danger.active { color: #e64a19; background-color: #cccccc;}
+.pmd-btn1-flat.btn1-danger:focus { color: #d84315; background-color: #cccccc;}
+.pmd-btn1-flat.btn1-danger .ink { background-color: #808080;}
+
+/*-- Button danger outline --*/
+.pmd-btn1-outline.btn1-danger{ border: solid 1px #ff5722; background-color:transparent; color:#ff5722;}
+.pmd-btn1-outline.btn1-danger:hover, .pmd-btn1-outline.btn1-danger:focus { border: solid 1px #ff5722; background-color:#ff5722; color:#fff;}
+
+/* -- Buttons sizes -------------------------------- */
+.btn1 { min-width: 88px; padding: 10px 14px;}
+.btn1-lg,.btn1-group-lg > .btn1 { min-width: 122px; padding: 10px 16px; font-size: 18px; line-height: 1.3;}
+.btn1-sm,.btn1-group-sm > .btn1 { min-width: 64px; padding: 4px 12px; font-size: 12px; line-height: 1.5;}
+.btn1-xs,.btn1-group-xs > .btn1 { min-width: 46px; padding: 2px 10px; font-size: 10px; line-height: 1.5;}
+
+/* -- Buttons circle sizes --*/
+.pmd-btn1-fab { width: 56px; height: 56px; min-width: 56px;}
+.pmd-btn1-fab span { line-height: 56px;}
+.pmd-btn1-fab.btn1-lg { width: 78px; height: 78px; min-width: 78px;}
+.pmd-btn1-fab.btn1-lg span { line-height: 78px;}
+.pmd-btn1-fab.btn1-sm { width: 40px; height: 40px; min-width: 40px;}
+.pmd-btn1-fab.btn1-sm span, .pmd-btn1-fab.btn1-sm i { line-height: 40px;}
+.pmd-btn1-fab.btn1-xs { width: 30px; height: 30px; min-width: 30px;}
+.pmd-btn1-fab.btn1-xs span, .pmd-btn1-fab.btn1-xs i { line-height: 30px;}
+
+/*---------------------------------- Button groups --------------------------------- */
+.btn1-group .btn1 { border-radius: 2px;}
+.btn1-group.open .dropdown-toggle { outline: 0; outline-offset: 0; box-shadow: none;}
+.btn1-group .btn1 + .btn1,.btn1-group .btn1 + .btn1-group,.btn1-group .btn1-group + .btn1,.btn1-group .btn1-group + .btn1-group { margin-left: 0;}
+.btn1-group > .btn1:hover,.btn1-group-vertical > .btn1:hover { z-index: 0;}
+.btn1-group > .btn1:focus:hover,.btn1-group-vertical > .btn1:focus:hover,.btn1-group > .btn1:active:hover,.btn1-group-vertical > .btn1:active:hover,.btn1-group > .btn1.active:hover,.btn1-group-vertical > .btn1.active:hover { z-index: 2;}
+
+/* --------------------------------- Ripple effect -------------------------------- */
+.pmd-ripple-effect { position: relative; overflow: hidden; -webkit-transform: translate3d(0, 0, 0);}
+.ink { display: block; position: absolute; pointer-events: none; border-radius: 50%; -ms-transform: scale(0); transform: scale(0); background: #fff; opacity: 1;}
+.ink.animate { animation: ripple .5s linear;}
+
+/*-- Button link outline --*/
+.pmd-btn1-outline.btn1-link{ border: solid 1px #333; background-color:transparent;}
+.pmd-btn1-outline.btn1-link:hover, .pmd-btn1-outline.btn1-link:focus { border: solid 1px #23527c; background-color:#23527c; color:#fff;}
+
+@keyframes ripple {100% { opacity: 0; transform: scale(2.5);}}

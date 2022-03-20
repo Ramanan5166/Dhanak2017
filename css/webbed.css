@@ -1,0 +1,365 @@
+@font-face{
+	font-family: 'Children';
+	src: url('../Autobus-Bold.ttf');
+}
+
+*{
+    margin : 0;
+}
+ul{
+    padding: 0;
+}
+body{
+    background-image: url(../image/Webbed%20page.jpg);
+    background-size: 100vw 100vh;
+    color: white;
+}
+a,a:visited, a:hover, a:active,a:focus{
+    text-decoration: none!important;
+    color: white;
+}
+.imgcontainer {
+    text-align: center;
+    position: relative;
+}
+#rule .imgcontainer {
+    height: 50px;
+}
+
+
+img.avatar {
+    height: 20vh;
+    border-radius: 50%;
+}
+
+.cont {
+    padding: 16px;
+}
+
+/* The Modal (background) */
+.model {
+ 	font-family: "Lato", sans-serif;
+	color: black;
+    display: none;  /*Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.model-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    right: 10vw;
+    width: 40%;
+    -webkit-animation: animatezoom 1s;
+    animation: animatezoom 1s;
+}
+.rule {
+    width: 50%;
+    color: black;
+    border-radius: 10px;
+    padding: 0vh 0 5vh;
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+}
+
+@-webkit-keyframes animatezoomX {
+    from {-webkit-transform: scaleX(0)} 
+    to {-webkit-transform: scaleX(1)}
+}
+    
+@keyframes animatezoomX {
+    from {transform: scaleX(0)} 
+    to {transform: scaleX(1)}
+}
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+#loginbut {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+#log{    
+    z-index: 10;
+    background-color: transparent;
+}
+#log button{
+    height: 5vh;
+    line-height: 5vh;
+    padding: 0 10px;
+}
+.logoutbtn {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+}
+#logbutton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+#logbutton:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+.ico {
+    margin: 10px;
+}
+
+#id01 input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+#nav{
+    border: 1px solid white;
+    position: fixed;
+    right: 5vw;
+    top: 25vh;
+    padding: 30px 0 30px 0vw;
+    color: white;   
+    font-family: 'Children';    
+}
+.ul{
+    width: 60px;
+    height: 1px;
+    background-color: white;
+    display: inline-block;
+}
+#nav li{
+    cursor: pointer;
+    display: block;
+    margin: 15px;
+    text-transform: capitalize;
+    font-weight: bolder;
+    font-size: 40px;
+    letter-spacing: 4px;
+}
+#play{
+    width: 100vw;
+    margin-left: 0vw;
+    text-align: center;
+}
+#pic{
+    width: 80%;
+    border-radius: 10px;
+}
+#play input[type="submit"]{
+    font-family: 'Children';    
+    letter-spacing: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 14px 20px;
+    cursor: pointer;
+    margin: 20px;
+    border: 1px solid #9C0001;
+    color: white;
+    background-color: #9C0001;
+}
+#nxt{
+    font-family: 'Children';    
+    letter-spacing: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 14px 20px;
+    cursor: pointer;
+    margin: 20px;
+    border: 1px solid #9C0001;
+    color: white;
+    background-color: #9C0001;
+}
+#result{
+    height: 30px;
+    line-height: 30px;
+    padding: 10px 0;
+}
+#play input[type="text"]{
+    font-family: 'Children';    
+    letter-spacing: 3px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 14px 20px;
+    margin: 20px;
+    border: none;
+    border: 1px solid #9C0001;
+}
+#leader iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+#animate {
+    border-radius: 20px;
+    width: 40%;
+    border: 1px solid white;
+    height: 80%;
+    margin: 0 auto;
+    background-color: #9C0001;
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s;
+}
+#game{
+    border-radius: 10px;
+    color:#9C0001;
+    background-color: white;
+    font-family: 'Children';    
+    letter-spacing: 5px;
+    margin-top: 15vh;
+    margin-left: 5vw;
+    width: 60%;
+}
+#game h1{
+    padding: 15px 0;
+}
+    #ham{
+        display: none;
+}
+#ls{
+	text-align: right;
+}
+#logshift {
+    padding: 10px;
+    font-size: 14px;
+	border: none;
+    border-radius: 5px;
+    color: white;
+	background-color: #ed786a;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 600px)  {
+    body{
+        background-color: #9B0000;
+        background-image: none;
+    }
+	#play{
+		width: 100vw;
+		height: 100vh;
+		overflow: hidden;
+	}
+	#nav{
+    border: none;
+    position: relative;
+    height: 90vh;
+    top: 0vh;
+    left: 0;
+    padding: 15px 0;
+    margin: 5vh 0;
+    color: white;   
+    font-family: 'Children'; 
+        transition: transform linear 1s;
+        transform-origin: top;
+}
+    .animate{
+        width: 90%;
+    }
+    #game{
+        width: 100vw;
+        border-radius: 0;
+        height: 100vh;
+        margin: 0;
+    }
+    #animate{
+        width: 90%;
+    }
+    .rule{
+        width: 90%;
+    }
+    .show{
+        transform: scaleY(1);
+    }
+    .hide{
+        display: none;
+        transform: scaleY(0);
+    }
+    #ham{
+        color:#9B0000;
+        display: inline-block;
+        position: fixed;
+        z-index: 10;
+        top:5vh;
+        left: 10vw;
+    }
+#result{
+    height: 50px;
+    padding: 50px 0;
+}
+
+}
